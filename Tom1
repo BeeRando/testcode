@@ -1,0 +1,45 @@
+import java.awt.*;
+import java.sql.SQLOutput;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+Scanner doorquestion = new Scanner(System.in);
+
+        boolean passedAlldoors = false;
+        int doorCount = 0;
+
+        System.out.println("pick a door, left or right");
+        String door1 = doorquestion.next();
+
+// TOM!! I have managed to make if(door1 == "left" || door1 == "Left") work. but only if thats on its own. the second i set up doors 2 and 3,
+//this door1 area no longer works, and no longer gives me the "we passed the first door" message.
+//Ive used chatgpt, which i have pasted in another file. that code works, but I want to understand WHYYYYY door1 works with this method, UNTIL i set up door2 and door3, and then now none of them work, including door1
+
+        if(door1 == "left" || door1 == "Left") {
+            System.out.println("we passed the first door!");
+            doorCount = doorCount + 1;
+        }
+        System.out.println("pick your second door, left or right");
+        String door2 = doorquestion.next();
+        if(door2 == "left" || door2 == "Left") {
+            System.out.println("we passed the second door!");
+            doorCount = doorCount + 1;
+        }
+        System.out.println("pick your final door, left or right");
+        String door3 = doorquestion.next();
+        if(door3 == "right" || door3 == "Right") {
+            System.out.println("we passed the third and final door!");
+            doorCount = doorCount + 1;
+        }
+        if(doorCount == 3){
+            passedAlldoors = true;
+        }
+        if(passedAlldoors) {
+            System.out.println("congrats! you passed all 3 doors");
+        }
+    }
+}
