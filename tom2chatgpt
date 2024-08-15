@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner doorquestion = new Scanner(System.in);
+
+        boolean passedAlldoors = false;
+        int doorCount = 0;
+
+        System.out.println("Pick a door, left or right");
+        String door1 = doorquestion.next();
+
+        if(door1.equalsIgnoreCase("left")) {
+            System.out.println("We went left, and passed the first door!");
+            doorCount = doorCount + 1;
+        }
+
+        System.out.println("Pick a door, left or right");
+        String door2 = doorquestion.next();
+        if(door2.equalsIgnoreCase("left")) {
+            System.out.println("We went left and passed the second door!");
+            doorCount = doorCount + 1;
+        }
+
+        System.out.println("Pick a door, left or right");
+        String door3 = doorquestion.next();
+        if(door3.equalsIgnoreCase("right")) {
+            System.out.println("We went right, and passed the third door!");
+            doorCount = doorCount + 1;
+        }
+
+        if(doorCount == 3){
+            passedAlldoors = true;
+        }
+
+        if(passedAlldoors) {
+            System.out.println("Congrats! You passed all 3 doors.");
+        }
+    }
+}
