@@ -1,0 +1,49 @@
+import java.awt.*;
+import java.sql.SQLOutput;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner mytyping = new Scanner(System.in);
+        mytyping.next();
+        Random numbergenerator = new Random();
+        int g = numbergenerator.nextInt(5);
+
+
+        String a = "you will die";
+        String b = "yes, I think so";
+        String c = "No, not at all";
+        String d = "Its possible, if you work hard at it";
+        String e = "yes, but its not what you want";
+
+        String selectedstring = "";
+        switch (g) {
+            case 0:
+                selectedstring = a;
+                break;
+
+            case 1:
+                selectedstring = b;
+                break;
+
+            case 2:
+                selectedstring = c;
+                break;
+
+            case 3:
+                selectedstring = d;
+                break;
+
+            case 4:
+                selectedstring = e;
+                break;
+
+        }
+        System.out.println(selectedstring);
+
+    }
+}
